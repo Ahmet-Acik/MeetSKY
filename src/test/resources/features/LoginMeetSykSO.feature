@@ -3,9 +3,11 @@ Feature:  Test login functionality
 
   US As a user, I should be able to login.
 
+  Background:
+    Given User goes to login page
+
   @MTSK-404
   Scenario Outline: user should be able to login with valid credentials
-    Given User goes to login page
     When user enters "<username>" username
     And user enters "<password>" password
     And user clicks to Log in button
@@ -18,7 +20,6 @@ Feature:  Test login functionality
 
   @MTSK-405
   Scenario Outline: user can not login as blank
-    Given User goes to login page
     When user enters "<username>" username
     And user enters "<password>" password
     And user clicks to Log in button
@@ -31,7 +32,6 @@ Feature:  Test login functionality
 
   @MTSK-406
   Scenario Outline: user can not login with invalid credentials
-    Given User goes to login page
     When user enters "<username>" username
     And user enters "<password>" password
     And user clicks to Log in button
@@ -49,7 +49,6 @@ Feature:  Test login functionality
 
   @MTSK-407
   Scenario: can see dots and then password explicitly
-    Given User goes to login page
     When user enters "<password>" password
     And user can see dots in the password input
     And user Clicks to the eye symbol
@@ -57,13 +56,11 @@ Feature:  Test login functionality
 
   @MTSK-408
   Scenario: Reset Password Link can be seen
-    Given User goes to login page
     When user click to Forgot password link
     Then user can see Reset Password button
 
   @MTSK-409
   Scenario:Username or email and Password placeholder is visible
-    Given User goes to login page
     Then User can see "Username or email" and "Password" placeholder is visible
 
 
