@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/meetsky/step_definitions",
         dryRun = false,
-        tags = "@MTSK-410",
+        tags = "@MTSK-413",
         publish = false
         )
 
