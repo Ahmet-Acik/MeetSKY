@@ -30,7 +30,7 @@ public class LogOutMeetSky {
         logoutPage.selectMenu.click();
     }
 
-    @When("User Clicks Log out button")
+    @Given("User Clicks Log out button")
     public void userClicksLogOutButton() {
         logoutPage.logoutButton.click();
     }

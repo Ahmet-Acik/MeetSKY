@@ -5,7 +5,7 @@ Feature: Log out functionality
   Background:
     Given User logs in with valid credentials
     Given User clicks to Expandable content button on top-right corner
-    When User Clicks Log out button
+    Given User Clicks Log out button
 
   @MTSK-411
   Scenario: User can log out and land in login page

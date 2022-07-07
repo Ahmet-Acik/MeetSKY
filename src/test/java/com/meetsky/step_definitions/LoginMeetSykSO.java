@@ -39,7 +39,7 @@ public class LoginMeetSykSO {
 
     @Then("user can login")
     public void user_can_login() {
-        Assert.assertEquals("Files - Meetsky - QA", Driver.getDriver().getTitle());
+        Assert.assertTrue(Driver.getDriver().getTitle().contains(ConfigurationReader.getProperty("loginTitle")));
     }
 
     @When("user can see dots in the password input")

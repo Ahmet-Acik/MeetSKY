@@ -14,9 +14,11 @@ Feature:  Test login functionality
     Examples:
       | username    | password    |
       | Employee71  | Employee123 |
-      | Employee1   | Employee123 |
       | Employee21  | Employee123 |
+      | Employee1   | Employee123 |
+      | Employee2   | Employee123 |
       | Employee299 | Employee123 |
+      | Employee300 | Employee123 |
 
 
   @MTSK-405
@@ -39,13 +41,15 @@ Feature:  Test login functionality
     Then user can not login and see Wrong username or password.
     Examples:
       | username         | password         |
-      | Employee71       | Emp23.           |
+      | Employee0        | Employee123      |
+      | Employee301      | Employee123      |
       | Employee21       | empLoyee123      |
-      | 71Emp            | Employee123      |
-      | 7                | Employee123      |
-      | 21Emp01          | Employee123      |
+      | Employee71       | EMPLOYEE123      |
+      | EMPLOYEE21       | Employee123      |
+      | EMPLOYEE71       | Employee123      |
       | 213Employ        | Employee123      |
-      | Ahmet123         | E                |
+      | Em               | E                |
+      | Emp              | Em               |
       | AhmetAkk32145123 | Employeee321456. |
 
   @MTSK-407
@@ -62,6 +66,6 @@ Feature:  Test login functionality
 
   @MTSK-409
   Scenario:Username or email and Password placeholder is visible
-      Then User can see "Username or email" and "Password" placeholder is visible
+    Then User can see "Username or email" and "Password" placeholder is visible
 
 
