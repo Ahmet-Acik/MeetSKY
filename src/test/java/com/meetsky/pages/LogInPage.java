@@ -1,5 +1,6 @@
 package com.meetsky.pages;
 
+import com.meetsky.utilities.ConfigurationReader;
 import com.meetsky.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -25,5 +26,14 @@ public class LogInPage {
 
     @FindBy(xpath = "//a[@id='lost-password']")
     public WebElement forgotPasswordLink;
+
+
+    public void login() {
+        Driver.getDriver().get(ConfigurationReader.getProperty("login_url"));
+        usernameInput.sendKeys(ConfigurationReader.getProperty("user_name"));
+        passwordInput.sendKeys(ConfigurationReader.getProperty("password"));
+        loginClick.click();
+        // verification that user logged in
+    }
 
 }
